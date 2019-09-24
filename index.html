@@ -13,52 +13,58 @@
   </header>
   <main>
     <div class='container'>
-      <section class='meal left'>
-        <h2>Enter the Meal Details</h2>
-        <form action="" method="GET" class="meal-form" id="meal-form" >
-          <div class="meal-input">
-            <label for="base-price">Base Meal Price: $</label>
-            <input type="number" step="0.01" min="0" name="base-price" id="base-price" placeholder="9.99" required>
+      <div class='left'>
+        <section class='meal'>
+          <h2>Enter the Meal Details</h2>
+          <form action="" method="GET" class="meal-form" id="meal-form" >
+            <div class="meal-input">
+              <label for="base-price">Base Meal Price: $</label>
+              <input type="number" step="0.01" min="0" name="base-price" id="base-price" placeholder="9.99" required>
+            </div>
+            <div class="meal-input">
+              <label for="tax">Tax Rate: %</label>
+              <input type="number" step="any" name="tax" id="tax" placeholder="7.5" required>
+            </div>
+            <div class="meal-input">
+              <label for="tip">Tip Percentage: %</label>
+              <input type="number" step="any" name="tip" id="tipIn" placeholder="15" required>
+            </div>
+            <div class='controls'>
+              <button type="submit">Submit</button>
+              <button type="reset">Cancel</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class='right'>
+        <section class="charges">
+          <h2>Customer Charges</h2>
+          <div class="line-item">
+            <span class="label  charges">Subtotal</span> <span class="num" id="subtotal"></span></div>
+          <div class="line-item charges">
+            <span class="label  charges">Tip</span> <span class="num" id="tip"></span>
           </div>
-          <div class="meal-input">
-            <label for="tax">Tax Rate: %</label>
-            <input type="number" step="any" name="tax" id="tax" placeholder="7.5" required>
+          <div class="sum-line"> </div>
+          <div class="line-item charges">
+            <span class="label  charges">Total</span> <span class="num" id="total"></span>
           </div>
-          <div class="meal-input">
-            <label for="tip">Tip Percentage: %</label>
-            <input type="number" step="any" name="tip" id="tipIn" placeholder="15" required>
+        </section>
+        <section class="earnings">
+          <h2>My Earnings Info</h2>
+          <div class="line-item earnings">
+            <span class="label">Tip Total</span> <span class="num" id="tip-total"></span>
           </div>
-          <button type="submit">Submit</button>
-          <button type="reset">Cancel</button>
-        </form>
-      </section>
-      <section class="charges right">
-        <h2>Customer Charges</h2>
-        <div class="line-item">
-          <span class="label">Subtotal</span> <span class="decimal-align num" id="subtotal"></span></div>
-        <div class="line-item">
-          <span class="label">Tip</span> <span class="decimal-align num" id="tip"></span>
-        </div>
-        <div class="sum-line"> </div>
-        <div class="line-item">
-          <span class="label">Total</span> <span class="decimal-align num" id="total"></span>
-        </div>
-      </section>
-      <section class="earnings right">
-        <h2>My Earnings Info</h2>
-        <div class="line-item">
-          <span class="label">Tip Total</span> <span class="decimal-align num" id="tip-total"></span>
-        </div>
-        <div class="line-item"> 
-          <span class="label">Meal count</span> <span class="num " id="meal-count"></span>
-        </div>
-        <div class="line-item">
-          <span class="label">Average Tip Per Meal</span> <span class="decimal-align num" id="tip-average"></span>
-        </div>
-      </section>
+          <div class="line-item earnings"> 
+            <span class="label">Meal count</span> <span class="num " id="meal-count"></span>
+          </div>
+          <div class="line-item earnings">
+            <span class="label">Average Tip Per Meal</span> <span class="num" id="tip-average"></span>
+          </div>
+        </section>
+      </div>
+      <button id="reset-page" action="submit">Reset</button> 
     </div>
   </main>
-  <button id="reset-page" action="submit">Reset</button> 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>

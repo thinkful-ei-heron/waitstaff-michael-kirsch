@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+header{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2{
+  border-bottom: black solid 2px;
+  width: 100%;
+  padding-bottom: .5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 400px;
+  justify-content: center;
+  width: fit-content;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: 
+  margin:5px;
+  width: fit-content;
+  min-width: 300px;
+}
+.left {
+  display: flex;
+  margin:5px;
+  width: fit-content;
+}
+
+label{
+  float: left;
+  clear: left;
+  width: 12em;
+  text-align: right;
+}
+input {
+  float: left;
+}
+
+.line-item{
+  text-align: center;
+  
+}
+
+.num{
+  text-align: left;
+  display: inline-block;
+  width: 28%;
+}
+.label{
+  display: inline-block;
+  clear: left;
+  text-align: right;
+  width: 70%;
+}
+
+.label.charges{
+  width: 50%;
+}
+
+#tax, #tipIn {
+  width: 3em;
+}
+#base-price {
+  width: 8em;
+}
+
+section {
+  outline: 2px solid black;
+  margin: 20px;
+  width: auto; 
+  text-align: center;
+  position: relative;
+  flex-grow: 1;
+}
+
+.controls {
+  display: block;
+  clear: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20%;
+  width: fit-content;
+}
+
+button {
+  border: 2px black solid;
+  border-radius: 0px;
+  background: none;
+  box-shadow: 3px 3px black;
+  margin: 5px;
+}
+
+#reset-page {
+  display: block;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.sum-line {
+  border: 1px solid black;
+  width: 50%;
+  margin-left: auto;
+  margin-right: 15%;
+  clear: left;
+}
