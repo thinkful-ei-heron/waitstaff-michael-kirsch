@@ -4,13 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Waiter Earnings Calculator</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+  <header>
+    <h1>Waitstaff Calculator</h1>
+  </header>
+  <main>
+    <div class='container'>
+      <section class='meal left'>
+        <h2>Enter the Meal Details</h2>
+        <form action="" method="GET" class="meal-form" id="meal-form" >
+          <div class="meal-input">
+            <label for="base-price">Base Meal Price: $</label>
+            <input type="number" step="0.01" min="0" name="base-price" id="base-price" placeholder="9.99" required>
+          </div>
+          <div class="meal-input">
+            <label for="tax">Tax Rate: %</label>
+            <input type="number" step="any" name="tax" id="tax" placeholder="7.5" required>
+          </div>
+          <div class="meal-input">
+            <label for="tip">Tip Percentage: %</label>
+            <input type="number" step="any" name="tip" id="tipIn" placeholder="15" required>
+          </div>
+          <button type="submit">Submit</button>
+          <button type="reset">Cancel</button>
+        </form>
+      </section>
+      <section class="charges right">
+        <h2>Customer Charges</h2>
+        <div class="line-item">
+          <span class="label">Subtotal</span> <span class="decimal-align num" id="subtotal"></span></div>
+        <div class="line-item">
+          <span class="label">Tip</span> <span class="decimal-align num" id="tip"></span>
+        </div>
+        <div class="sum-line"> </div>
+        <div class="line-item">
+          <span class="label">Total</span> <span class="decimal-align num" id="total"></span>
+        </div>
+      </section>
+      <section class="earnings right">
+        <h2>My Earnings Info</h2>
+        <div class="line-item">
+          <span class="label">Tip Total</span> <span class="decimal-align num" id="tip-total"></span>
+        </div>
+        <div class="line-item"> 
+          <span class="label">Meal count</span> <span class="num " id="meal-count"></span>
+        </div>
+        <div class="line-item">
+          <span class="label">Average Tip Per Meal</span> <span class="decimal-align num" id="tip-average"></span>
+        </div>
+      </section>
+    </div>
+  </main>
+  <button id="reset-page" action="submit">Reset</button> 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
